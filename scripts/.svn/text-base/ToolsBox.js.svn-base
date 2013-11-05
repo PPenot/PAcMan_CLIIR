@@ -1,0 +1,26 @@
+$(document).ready(function()
+{
+    // tool box init
+    document.getElementById("Dijkstra").checked = ENABLED_DIJKSTRA;
+    document.getElementById("DT").value = DT;
+    // changement reaction
+    $("#start").click(function()
+    {
+        ENABLED_DIJKSTRA = document.getElementById("Dijkstra").checked;
+    });
+    
+    $("#DT").change(function()
+    {
+        DT = document.getElementById("DT").value;
+    }
+    );
+
+    $("#dijkstra").change(function()
+    {
+        ENABLED_DIJKSTRA = document.getElementById("Dijkstra").checked;
+    }
+    );
+});
+
+
+

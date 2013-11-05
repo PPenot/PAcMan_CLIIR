@@ -1,0 +1,59 @@
+
+function Node (val, identifiant)
+{
+     this.objectConst = Object;
+     this.objectConst("Node");
+
+    //this.prototype = new Object("Node");
+
+    var id = identifiant;
+    var value = val;
+    var firstEdge = undefined;
+    var nextNode = undefined;
+
+    this.getId = function()
+    {
+        return id;
+    }
+
+    this.getNextNode = function()
+    {
+        return nextNode;
+    }
+    this.setNextNode = function(node)
+    {
+        if(node.getType() != "Node")
+        {
+               alert("this isn't a Node");
+        }
+        else
+        {
+            nextNode = node;
+        }
+    }
+
+    this.getFirstEdge = function()
+    {
+        return firstEdge;
+    }
+
+    this.setFirstEdge = function(edge)
+    {
+        if(edge.getType() != "Edge")
+        {
+               alert("this isn't an Edge");
+        }
+        else
+        {
+            firstEdge = edge;
+        }
+    }
+    this.getValue = function()
+    {
+        return value;
+    }
+    this.setValue = function(val)
+    {
+        value = val;
+    }
+}
